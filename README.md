@@ -20,7 +20,7 @@ This winning project was conceptualized and built during a continuous 12-hour sp
 * **[Suma](https://github.com/Suma-1417) (Team Lead & AI Architect)**: Directed project vision and led the core development of the RAG (Retrieval-Augmented Generation) pipeline and Gmail API integration.
 * **[Vineetha](https://github.com/Vineetha-17) (Lead AI Developer)**: Primary architect of the LLM orchestration using Ollama and developed the vector embedding logic for style matching.
 * **[Devisri](https://github.com/Devisri1103) (Data & Security Engineer)**: Managed the secure OAuth 2.0 authentication flow and implemented the personal information detection logic.
-* **Shammera (QA & Privacy Specialist)**: Conducted rigorous testing of tone-matching accuracy and optimized the local data cleaning pipeline.
+* **Shameera (QA & Privacy Specialist)**: Conducted rigorous testing of tone-matching accuracy and optimized the local data cleaning pipeline.
 
 ---
 
