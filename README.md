@@ -1,5 +1,5 @@
 
-# 📧 MASKED - Masked Email Drafts (AI E-mail Assistant)
+# 📧 MaskED - Masked Email Drafts (AI E-mail Assistant)
 
 ![Status](https://img.shields.io/badge/Status-1st_Place_Winner-gold) ![License](https://img.shields.io/badge/License-MIT-blue) ![Tech](https://img.shields.io/badge/Stack-GenAI_/_LLM-red)
 
