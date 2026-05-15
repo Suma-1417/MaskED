@@ -1,6 +1,28 @@
-# 📧 Gmail AI Assistant
 
-An intelligent email reply generator that uses AI and your writing style to automatically draft professional responses to incoming emails.
+# 📧 MASKED - Masked Email Drafts (AI E-mail Assistant)
+
+![Status](https://img.shields.io/badge/Status-1st_Place_Winner-gold) ![License](https://img.shields.io/badge/License-MIT-blue) ![Tech](https://img.shields.io/badge/Stack-GenAI_/_LLM-red)
+
+**1st Place Winner** at the 12-hour GenAI & LLM Hackathon. **MASKED** is an intelligent email reply generator that uses local LLMs and RAG (Retrieval-Augmented Generation) to automatically draft professional responses matching your unique writing style.
+
+---
+
+## 🏆 Hackathon Achievement
+* **Event:** 12-Hour GenAI & LLM Hackathon
+* **Result:** **1st Prize** 🥇
+* **Challenge:** Building a high-performance, privacy-first AI agent in under 12 hours.
+
+---
+
+## 👥 Meet the Team
+This winning project was conceptualized and built during a continuous 12-hour sprint.
+
+* **[Suma](https://github.com/Suma-1417) (Team Lead & AI Architect)**: Directed project vision and led the core development of the RAG (Retrieval-Augmented Generation) pipeline and Gmail API integration.
+* **[Vineetha](https://github.com/Vineetha-17) (Lead AI Developer)**: Primary architect of the LLM orchestration using Ollama and developed the vector embedding logic for style matching.
+* **[Devisri](https://github.com/Devisri1103) (Data & Security Engineer)**: Managed the secure OAuth 2.0 authentication flow and implemented the personal information detection logic.
+* **Shammera (QA & Privacy Specialist)**: Conducted rigorous testing of tone-matching accuracy and optimized the local data cleaning pipeline.
+
+---
 
 ## ✨ Features
 
@@ -34,8 +56,9 @@ The assistant follows a 6-step pipeline:
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
-cd gmail_ai_assistant
+git clone [https://github.com/Suma-1417/MASKED-Email-Assistant.git](https://github.com/Suma-1417/MASKED-Email-Assistant.git)
+cd MASKED-Email-Assistant
+
 ```
 
 ### 2. Create virtual environment
@@ -43,21 +66,21 @@ cd gmail_ai_assistant
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
 ```
 
 ### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
+
 ```
 
 ### 4. Setup Gmail API
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project
-3. Enable the Gmail API
-4. Create OAuth 2.0 credentials (Desktop application)
-5. Download credentials as `credentials.json` and place in project root
+2. Create a new project and enable Gmail API
+3. Create OAuth 2.0 credentials and save as `credentials.json` in the project root
 
 ### 5. Configure settings
 
@@ -69,15 +92,8 @@ OLLAMA_MODEL = "mistral"
 MY_IDENTITY = """
 Your Name
 Title | Organization
-Email | Phone
 """
-```
 
-### 6. Start Ollama
-
-```bash
-ollama serve
-# In another terminal: ollama pull mistral
 ```
 
 ## 📖 Usage
@@ -86,21 +102,12 @@ ollama serve
 
 ```bash
 python app.py
+
 ```
 
-The script will:
-1. Connect to Gmail
-2. Read your sent emails for style reference
-3. Build a local embeddings index
-4. Process each inbox email
-5. Generate AI replies matching your tone
-6. Save drafts to Gmail
-
-### Review and Send
-
-- Check Gmail drafts for generated replies
-- Edit if needed
-- Send or discard
+1. Connects to Gmail via OAuth.
+2. Builds a local vector index of your sent emails.
+3. Generates drafts in your Gmail account for review.
 
 ## 📁 Project Structure
 
@@ -112,29 +119,15 @@ gmail_ai_assistant/
 ├── rag.py              # Vector embeddings & retrieval
 ├── intent.py           # Personal info detection
 ├── config.py           # Configuration settings
-├── privacy.py          # Privacy utilities
-├── requirements.txt    # Python dependencies
-└── credentials.json    # Gmail API credentials (git-ignored)
+└── requirements.txt    # Python dependencies
+
 ```
-
-## 🔧 Configuration Options
-
-### `config.py`
-
-| Setting | Options | Description |
-|---------|---------|-------------|
-| `MODE` | "professional", "personal" | Tone for generated replies |
-| `OLLAMA_MODEL` | "mistral", "llama2", etc. | LLM model to use |
-| `MY_IDENTITY` | String | Your signature/contact info |
-| `SCOPES` | Gmail API scopes | API permissions (read inbox/compose) |
 
 ## 🔒 Privacy & Security
 
-- ✅ All email processing happens locally
-- ✅ Embeddings generated locally using Sentence Transformers
-- ✅ No data sent to external APIs (except Gmail OAuth)
-- ✅ OAuth 2.0 authentication for Gmail
-- ✅ Credentials never committed to version control
+* ✅ All email processing happens locally via Ollama.
+* ✅ Embeddings generated locally using Sentence Transformers.
+* ✅ OAuth 2.0 authentication ensures secure access to Gmail.
 
 ## ⚠️ Limitations
 
@@ -182,4 +175,5 @@ This project is provided as-is for personal use.
 
 ---
 
-**Built with ❤️ using Ollama, FAISS, and Sentence Transformers**
+**Built with ❤️ by the 1st Place Winning Team using Ollama, FAISS, and Sentence Transformers**
+
